@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tuner_free/core/app_style.dart';
 import 'package:tuner_free/views/cubit/home_cubit/home_cubit.dart';
 import 'package:tuner_free/views/cubit/home_cubit/home_state.dart';
+
 import 'package:tuner_free/views/widgets/auxiliary_icon.dart';
 
 import 'package:tuner_free/views/widgets/circle_pitch.dart';
@@ -27,8 +28,12 @@ class _HomeState extends State<Home> {
       return Scaffold(
         backgroundColor:
             state.isRecording ? AppStyle().primaryBackground : Colors.red,
-        body: CirclePitch(
-          note: state.note,
+        body: Stack(
+          children: [
+            CirclePitch(
+              note: state.note,
+            ),
+          ],
         ),
         bottomNavigationBar: const AuxiliaryIcon(),
       );
