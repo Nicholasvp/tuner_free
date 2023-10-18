@@ -26,13 +26,16 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(builder: (context, state) {
+      print(context.read<HomeCubit>().checkFrequency(state.frequency));
       return Scaffold(
         backgroundColor:
             state.isRecording ? AppStyle().primaryBackground : Colors.red,
         body: CirclePitch(
           note: state.note,
+          octave: state.octave,
+          tuned: state.status,
         ),
-        bottomNavigationBar: AuxiliaryIcon(status: state.status),
+        bottomNavigationBar: AuxiliaryIcon(isOnPitch: state.status),
       );
     });
   }

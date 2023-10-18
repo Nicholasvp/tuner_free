@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:tuner_free/core/app_style.dart';
 
 class CirclePitch extends StatelessWidget {
-  const CirclePitch({super.key, required this.note});
+  const CirclePitch(
+      {super.key,
+      required this.note,
+      required this.octave,
+      required this.tuned});
   final String note;
+  final int octave;
+  final bool tuned;
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +23,23 @@ class CirclePitch extends StatelessWidget {
         screenSize.height * 0.2,
       ),
       decoration: BoxDecoration(
-        color: AppStyle().primaryColor,
+        color: tuned ? AppStyle().sucessColor : AppStyle().primaryColor,
         shape: BoxShape.circle,
       ),
       child: Center(
-        child: Text(
-          note,
-          style: AppStyle().primary,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text(
+              note,
+              style: AppStyle().primary,
+            ),
+            Text(
+              "$octave",
+              style: AppStyle().secondary,
+            ),
+          ],
         ),
       ),
     );

@@ -1,35 +1,39 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:pitchupdart/tuning_status.dart';
-
 class HomeState {
   final double frequency;
   final String note;
+  final int octave;
+  final bool status;
   final bool isRecording;
-  final TuningStatus status;
+
   HomeState({
     required this.frequency,
     required this.note,
-    required this.isRecording,
+    required this.octave,
     required this.status,
+    required this.isRecording,
   });
 
   factory HomeState.initial() => HomeState(
-      frequency: 0,
-      note: "A",
-      isRecording: false,
-      status: TuningStatus.undefined);
+        frequency: 0,
+        note: "A",
+        status: false,
+        isRecording: false,
+        octave: 1,
+      );
 
   HomeState copyWith({
     double? frequency,
     String? note,
+    int? octave,
+    bool? status,
     bool? isRecording,
-    TuningStatus? status,
   }) {
     return HomeState(
       frequency: frequency ?? this.frequency,
       note: note ?? this.note,
-      isRecording: isRecording ?? this.isRecording,
+      octave: octave ?? this.octave,
       status: status ?? this.status,
+      isRecording: isRecording ?? this.isRecording,
     );
   }
 }
