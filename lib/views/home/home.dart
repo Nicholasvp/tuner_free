@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:tuner_free/core/app_style.dart';
 import 'package:tuner_free/views/cubit/home_cubit/home_cubit.dart';
 import 'package:tuner_free/views/cubit/home_cubit/home_state.dart';
@@ -28,14 +29,10 @@ class _HomeState extends State<Home> {
       return Scaffold(
         backgroundColor:
             state.isRecording ? AppStyle().primaryBackground : Colors.red,
-        body: Stack(
-          children: [
-            CirclePitch(
-              note: state.note,
-            ),
-          ],
+        body: CirclePitch(
+          note: state.note,
         ),
-        bottomNavigationBar: const AuxiliaryIcon(),
+        bottomNavigationBar: AuxiliaryIcon(status: state.status),
       );
     });
   }
