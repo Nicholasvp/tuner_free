@@ -27,9 +27,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(builder: (context, state) {
       return Scaffold(
-        backgroundColor: state.isRecording
-            ? AppStyle().primaryBackground
-            : AppStyle().failureColor,
+        backgroundColor: AppStyle().primaryBackground,
         body: CirclePitch(
           note: state.note.isEmpty ? "A" : state.note,
           octave: state.octave,
