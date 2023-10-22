@@ -36,10 +36,20 @@ dependencies:
   flutter_fft: ^1.0.2+6
   flutter_native_splash: ^2.3.4
   google_fonts: ^6.1.0
+  icons_launcher: ^2.1.4
+  pitchupdart: ^0.0.2
 
 flutter_native_splash:
   color: "#2C2C2C"
-  image: "assets/logo.png"
+  image: "assets/logo_tuner.png"
+
+icons_launcher:
+  image_path: "assets/logo_tuner.png"
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
 
 dev_dependencies:
   flutter_lints: ^2.0.0

@@ -6,10 +6,10 @@ class CirclePitch extends StatelessWidget {
       {super.key,
       required this.note,
       required this.octave,
-      required this.tuned});
+      required this.status});
   final String note;
   final int octave;
-  final bool tuned;
+  final String status;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,14 @@ class CirclePitch extends StatelessWidget {
         screenSize.height * 0.2,
       ),
       decoration: BoxDecoration(
-        color: tuned ? AppStyle().sucessColor : AppStyle().primaryColor,
+        gradient: status == "tuned"
+            ? RadialGradient(
+                colors: [AppStyle().sucessColor, AppStyle().sucessColor2])
+            : status == "waytoohigh" || status == "waytoolow"
+                ? RadialGradient(
+                    colors: [AppStyle().failureColor, AppStyle().failureColor2])
+                : RadialGradient(
+                    colors: [AppStyle().sucessColor, AppStyle().sucessColor2]),
         shape: BoxShape.circle,
       ),
       child: Center(
