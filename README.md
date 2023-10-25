@@ -1,4 +1,4 @@
-# TurnerFree: Simple Guitar Tuner
+# TunerFree: Simple Guitar Tuner
 
 Welcome to TurnerFree! This project is designed to help musicians tune their guitars quickly and easily. With a simple and efficient interface, this tuner is ideal for beginners and musicians looking for a practical tool to keep their instruments in tune.
 
