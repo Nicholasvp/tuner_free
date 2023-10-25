@@ -1,16 +1,23 @@
-# tuner_free
+# TurnerFree: Simple Guitar Tuner
 
-A new Flutter project.
+Welcome to TurnerFree! This project is designed to help musicians tune their guitars quickly and easily. With a simple and efficient interface, this tuner is ideal for beginners and musicians looking for a practical tool to keep their instruments in tune.
 
-## Getting Started
+![Image 1](https://i.imgur.com/Oswq0uY.png)
+![Image 2](https://i.imgur.com/CNQ1ojh.png)
 
-This project is a starting point for a Flutter application.
+![Image 3](https://i.imgur.com/wer1SPA.png)
 
-A few resources to get you started if this is your first Flutter project:
+## Key Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Precision Tuning:** Utilizes advanced algorithms to ensure accurate tuning for your guitar.
+  
+- **Simple Interface:** Intuitive and easy-to-use design, allowing musicians of all levels to tune their instruments without complications.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Standard and Custom Tuning:** Offers options for standard tuning (such as EADGBE) and the ability to customize the tuning according to your preferences.
+
+## How to Use
+
+1. **Installation:**
+   - Clone this repository on your local machine.
+   ```bash
+   git clone https://github.com/Nicholasvp/tuner_free.git
